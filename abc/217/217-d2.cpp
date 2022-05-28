@@ -2,8 +2,8 @@
 set を使って解く。
 こちらのほうが一般的な解き方。
 
-二分探索はstd::lower_boundだと計算量がO(N)になるので注意。
-set::lower_boundだとO(logN)になる
+setを使う際、二分探索はstd::lower_boundを使ってしまうと計算量がO(N)になるので注意。
+set::lower_boundだと本来の計算量のO(logN)になる
 
 */
 #include <bits/stdc++.h>
@@ -26,7 +26,10 @@ int main(){
       	if(ci == 1){
             s.insert(xi);
         } else {
+            // setにはsetのメンバ関数のlower_boundを使う
             auto it = s.lower_bound(xi);
+            // NG: 計算量がO(N)になってしまう
+            // auto it = lower_bound(s.begin(), s.end(), xi);
             cout <<  *it - *prev(it) << endl;
         }
     }
