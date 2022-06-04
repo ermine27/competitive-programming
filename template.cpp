@@ -6,12 +6,23 @@ using namespace std;
 #define rrep(i,n) for(int i = (int)(n)-1; i >= 0; --i)
 #define fore(x,a) for(auto& x:a)
 #define all(v) v.begin(), v.end()
+#define pb push_back
+#define eb emplace_back
+#define mp make_pair
+#define sz(x) ((int)(x).size())
+#define cout(x) cout<<(x)
+#define couts(x) cout<<(x)<<' '
+#define coutn(x) cout<<(x)<<endl
 using ll = long long;
 using vi = vector<int>;
 using vl = vector<long long>;
+using vs = vector<string>;
 using vvi = vector<vi>;
 using vvl = vector<vl>;
 using pii = pair<int,int>;
+using pil = pair<int,ll>;
+using mii = map<int,int>;
+using mil = map<int,ll>;
 template<class T>bool chmax(T &a, const T &b) { if (a<b) { a=b; return 1; } return 0; }
 template<class T>bool chmin(T &a, const T &b) { if (b<a) { a=b; return 1; } return 0; }
 const int INF = 1e9;
