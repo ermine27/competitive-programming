@@ -30,7 +30,7 @@ const long long INFLL = 1e18;
 
 #ifdef LOCAL
 #include "../../debug_print.hpp"
-#define dbg(...) cout << '(' << __LINE__ << ')' << endl; debug_print::multi_print(#__VA_ARGS__, __VA_ARGS__)
+#define dbg(...) cerr << '(' << __LINE__ << ')' << endl; debug_print::multi_print(#__VA_ARGS__, __VA_ARGS__)
 #else
 #define dbg(...) (static_cast<void>(0))
 #endif
