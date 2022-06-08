@@ -3,8 +3,11 @@ using namespace std;
 
 #define reps(i,s,n) for(int i = (int)(s); i < (int)(n); ++i)
 #define rep(i,n) reps(i,0,n)
-#define rrep(i,n) for(int i = (int)(n)-1; i >= 0; --i)
+#define repf(i,n) reps(i,1,n+1)
+#define per(i,n) for(int i = (int)(n)-1; i >= 0; --i)
+#define perf(i,n) for(int i = (int)(n); i > 0; --i)
 #define fore(x,a) for(auto& x:a)
+#define fore2(k,v,a) for(auto& [k,v] : a)
 #define all(v) v.begin(), v.end()
 #define pb push_back
 #define eb emplace_back
