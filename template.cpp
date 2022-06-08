@@ -44,7 +44,7 @@ int main(){
     cin >> n >> m;
     vi s(n);
     rep(i, n) cin >> s[i];
-    vvi s(n, vi(m));
+    vvi r(n, vi(m));
 
     return 0;
 }
