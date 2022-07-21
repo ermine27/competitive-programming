@@ -28,8 +28,6 @@ using mii = map<int,int>;
 using mil = map<int,ll>;
 template<class T>bool chmax(T &a, const T &b) { if (a<b) { a=b; return 1; } return 0; }
 template<class T>bool chmin(T &a, const T &b) { if (b<a) { a=b; return 1; } return 0; }
-const int INF = 1e9;
-const long long INFLL = 1e18;
 
 #ifdef LOCAL
 #include "../../debug_print.hpp"
