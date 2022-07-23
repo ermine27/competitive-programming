@@ -43,8 +43,7 @@ int main() {
             field[pi] = move(it->second);
             field.erase(it);
 
-            // [c++17]
-            // extractを使って要素の所有権を転送した場合。上記よりこっちのほうが処理は早い
+            // [c++17] extractを使って要素の所有権を転送した場合。上記よりこっちのほうが処理は早い
             // auto node = field.extract(it->first);
             // node.key() = pi;
             // field.insert(move(node));
