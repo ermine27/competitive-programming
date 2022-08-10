@@ -1,13 +1,21 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define reps(i,s,n) for(int i = (int)(s); i < (int)(n); ++i)
-#define rep(i,n) reps(i,0,n)
-#define repf(i,n) reps(i,1,n+1)
+#define _overload2(a,b,f,...) f
+#define _overload3(a,b,c,f,...) f
+
+#define _rep1(i,n) for(int i = 0; i < (int)(n); ++i)
+#define _rep2(i,s,n) for(int i = (int)(s); i < (int)(n); ++i)
+#define _repe1(i,n) for(int i = 1; i <= (int)(n); ++i)
+#define _repe2(i,s,n) for(int i = (int)(s); i <= (int)(n); ++i)
+#define rep(...) _overload3(__VA_ARGS__, _rep2, _rep1)(__VA_ARGS__)
+#define repe(...) _overload3(__VA_ARGS__, _repe2, _repe1)(__VA_ARGS__)
 #define per(i,n) for(int i = (int)(n)-1; i >= 0; --i)
-#define perf(i,n) for(int i = (int)(n); i > 0; --i)
-#define fore(x,a) for(auto& x:a)
-#define fore2(k,v,a) for(auto& [k,v] : a)
+#define perf(i,n) for(int i = (int)(n); i >= 1; --i)
+#define _fore1(x,a) for(auto& x:a)
+#define _fore2(k,v,a) for(auto& [k,v] : a)
+#define fore(...) _overload3(__VA_ARGS__, _fore2, _fore1)(__VA_ARGS__)
+
 #define all(v) v.begin(), v.end()
 #define pb push_back
 #define eb emplace_back
