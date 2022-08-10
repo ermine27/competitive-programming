@@ -17,9 +17,6 @@ using namespace std;
 #define fore(...) _overload3(__VA_ARGS__, _fore2, _fore1)(__VA_ARGS__)
 
 #define all(v) v.begin(), v.end()
-#define pb push_back
-#define eb emplace_back
-#define mp make_pair
 #define sz(x) ((int)(x).size())
 #define cout(x) cout<<(x)
 #define couts(x) cout<<(x)<<' '
