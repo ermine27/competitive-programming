@@ -32,3 +32,23 @@ int main() {
     cout << min({ans, minl[n - 1], minr[0]}) << endl;
     return 0;
 }
+
+// 少しコードを短くしたもの
+int main2() {
+    int n;
+    ll l, r;
+    cin >> n >> l >> r;
+    vl a(n+2), minl(n+2), minr(n+2);
+    repf(i, n) cin >> a[i];
+
+    repf(i, n) minl[i] = min(minl[i - 1] + a[i], l * i);
+
+    reverse(all(a));
+    repf(i, n) minr[i] = min(minr[i - 1] + a[i], r * i);
+    reverse(all(minr));
+
+    ll ans = LONG_LONG_MAX;
+    rep(i, n + 1) chmin(ans, minl[i] + minr[i + 1]);
+    cout << ans << endl;
+    return 0;
+}
