@@ -18,9 +18,6 @@ using namespace std;
 
 #define all(v) v.begin(), v.end()
 #define sz(x) ((int)(x).size())
-#define cout(x) cout<<(x)
-#define couts(x) cout<<(x)<<' '
-#define coutn(x) cout<<(x)<<endl
 using ll = long long;
 using vi = vector<int>;
 using vl = vector<long long>;
