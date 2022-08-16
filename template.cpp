@@ -6,9 +6,9 @@ using namespace std;
 
 #define _rep1(i,n) for(int i = 0; i < (int)(n); ++i)
 #define _rep2(i,s,n) for(int i = (int)(s); i < (int)(n); ++i)
+#define rep(...) _overload3(__VA_ARGS__, _rep2, _rep1)(__VA_ARGS__)
 #define _repe1(i,n) for(int i = 1; i <= (int)(n); ++i)
 #define _repe2(i,s,n) for(int i = (int)(s); i <= (int)(n); ++i)
-#define rep(...) _overload3(__VA_ARGS__, _rep2, _rep1)(__VA_ARGS__)
 #define repe(...) _overload3(__VA_ARGS__, _repe2, _repe1)(__VA_ARGS__)
 #define per(i,n) for(int i = (int)(n)-1; i >= 0; --i)
 #define perf(i,n) for(int i = (int)(n); i >= 1; --i)
@@ -27,8 +27,9 @@ using pii = pair<int,int>;
 using pil = pair<int,ll>;
 using mii = map<int,int>;
 using mil = map<int,ll>;
-template<class T>bool chmax(T &a, const T &b) { if (a<b) { a=b; return 1; } return 0; }
-template<class T>bool chmin(T &a, const T &b) { if (b<a) { a=b; return 1; } return 0; }
+
+template<typename T>bool chmax(T &a, const T &b) { if (a<b) { a=b; return 1; } return 0; }
+template<typename T>bool chmin(T &a, const T &b) { if (b<a) { a=b; return 1; } return 0; }
 
 #ifdef LOCAL
 #include "../../debug_print.hpp"
