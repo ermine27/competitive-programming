@@ -27,6 +27,10 @@ using pii = pair<int,int>;
 using pil = pair<int,ll>;
 using mii = map<int,int>;
 using mil = map<int,ll>;
+#define vis(x,...) vi x(__VA_ARGS__)
+#define vls(x,...) vl x(__VA_ARGS__)
+#define vvis(x,h,...) vvi x(h,vi(__VA_ARGS__))
+#define vvls(x,h,...) vvl x(h,vl(__VA_ARGS__))
 
 template<typename T>bool chmax(T &a, const T &b) { if (a<b) { a=b; return 1; } return 0; }
 template<typename T>bool chmin(T &a, const T &b) { if (b<a) { a=b; return 1; } return 0; }
