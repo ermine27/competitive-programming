@@ -47,10 +47,10 @@ template<typename... T> void in(T&... a){ (cin >> ... >> a); }
 
 int main(){
     int n, m;
-    cin >> n >> m;
-    vi s(n);
-    rep(i, n) cin >> s[i];
-    vvi r(n, vi(m));
+    in(n, m);
+    vis(s,n);
+    rep(i, n) in(s[i]);
+    vvis(r,n,m);
 
     return 0;
 }
