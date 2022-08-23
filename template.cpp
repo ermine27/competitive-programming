@@ -35,6 +35,8 @@ using mil = map<int,ll>;
 template<typename T>bool chmax(T &a, const T &b) { if (a<b) { a=b; return 1; } return 0; }
 template<typename T>bool chmin(T &a, const T &b) { if (b<a) { a=b; return 1; } return 0; }
 
+template<typename... T> void in(T&... a){ (cin >> ... >> a); }
+
 #ifdef LOCAL
 #include "../../debug_print.hpp"
 #define dbg(...) cerr << '(' << __LINE__ << ')' << endl; debug_print::multi_print(#__VA_ARGS__, __VA_ARGS__)
