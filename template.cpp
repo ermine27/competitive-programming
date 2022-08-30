@@ -36,6 +36,8 @@ template<typename T>bool chmax(T &a, const T &b) { if (a<b) { a=b; return 1; } r
 template<typename T>bool chmin(T &a, const T &b) { if (b<a) { a=b; return 1; } return 0; }
 
 template<typename... T> void in(T&... a){ (cin >> ... >> a); }
+template<typename T> void out(T& a){ cout << a << '\n'; }
+template<typename T, typename... T2> void out(T& a, T2&... b){ cout << a; (cout << ... << (cout << ' ', b)); cout << '\n'; }
 
 #ifdef LOCAL
 #include "../../debug_print.hpp"
