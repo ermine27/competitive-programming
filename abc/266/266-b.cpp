@@ -1,5 +1,3 @@
-// https://qiita.com/happyisland44/items/8e4feb6805eecee29f83
-
 #include <bits/stdc++.h>
 using namespace std;
 
