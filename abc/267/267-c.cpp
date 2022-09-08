@@ -22,7 +22,6 @@ int main(){
     int n, m;
     in(n, m);
     vl a(n + 1), b(n + 1);
-
     repe(i, n) in(a[i]);
     repe(i, n) b[i] = b[i - 1] + a[i];
 
@@ -33,13 +32,11 @@ int main(){
 
     ll ans = t;
     repe(i, n - m) {
-        ll d = b[i + m - 1] - b[i];
-        t -= d;
-        t -= a[i];
-        t += a[i + m] * m;
+        t = t - (b[i + m - 1] - b[i - 1]) + a[i + m] * m;
         chmax(ans, t);
     }
 
     out(ans);
     return 0;
 }
+
