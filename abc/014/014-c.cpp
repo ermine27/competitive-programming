@@ -15,24 +15,23 @@ template<typename... T> void in(T&... a){ (cin >> ... >> a); }
 template<typename T> void out(T& a){ cout << a << '\n'; }
 template<typename T, typename... T2> void out(T& a, T2&... b){ cout << a; (cout << ... << (cout << ' ', b)); cout << '\n'; }
 
+const int COLORS = 1e6 + 1;
 
-const int COLORS = 1e6+1;
-
-int main(){
-    int n,a,b;
+int main() {
+    int n, a, b;
     in(n);
-    vi imos(COLORS+1);
+    vi imos(COLORS + 1);
 
-    rep(i, n){
-        in(a,b);
+    rep(i, n) {
+        in(a, b);
         ++imos[a];
-        --imos[b+1];
+        --imos[b + 1];
     }
 
     int cur = 0, ans = 0;
-    rep(i,COLORS){
+    rep(i, COLORS) {
         cur += imos[i];
-        chmax(ans,cur);
+        chmax(ans, cur);
     }
 
     out(ans);
