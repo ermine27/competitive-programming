@@ -20,9 +20,9 @@ using vl = vector<ll>;
 using vvi = vector<vi>;
 using vvl = vector<vl>;
 using pii = pair<int,int>;
-using pil = pair<int,ll>;
+using pll = pair<ll,ll>;
 using mii = map<int,int>;
-using mil = map<int,ll>;
+using mll = map<ll,ll>;
 #define vis(x,...) vi x(__VA_ARGS__)
 #define vls(x,...) vl x(__VA_ARGS__)
 #define vvis(x,h,...) vvi x(h,vi(__VA_ARGS__))
