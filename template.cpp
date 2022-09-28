@@ -16,7 +16,7 @@ using namespace std;
 #define sz(x) ((int)(x).size())
 using ll = long long;
 using vi = vector<int>;
-using vl = vector<long long>;
+using vl = vector<ll>;
 using vvi = vector<vi>;
 using vvl = vector<vl>;
 using pii = pair<int,int>;
