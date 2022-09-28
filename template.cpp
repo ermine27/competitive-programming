@@ -9,8 +9,6 @@ using namespace std;
 #define _repe1(i,n) for(int i = 1; i <= (int)(n); ++i)
 #define _repe2(i,s,n) for(int i = (int)(s); i <= (int)(n); ++i)
 #define repe(...) _overload3(__VA_ARGS__, _repe2, _repe1)(__VA_ARGS__)
-#define per(i,n) for(int i = (int)(n)-1; i >= 0; --i)
-#define perf(i,n) for(int i = (int)(n); i >= 1; --i)
 #define _fore1(x,a) for(auto& x:a)
 #define _fore2(k,v,a) for(auto& [k,v] : a)
 #define fore(...) _overload3(__VA_ARGS__, _fore2, _fore1)(__VA_ARGS__)
