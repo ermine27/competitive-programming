@@ -34,7 +34,8 @@ template<typename T>bool chmin(T &a, const T &b) { if (b<a) { a=b; return 1; } r
 template<typename... T> void in(T&... a){ (cin >> ... >> a); }
 template<typename T> void out(T& a){ cout << a << '\n'; }
 template<typename T, typename... T2> void out(T& a, T2&... b){ cout << a; (cout << ... << (cout << ' ', b)); cout << '\n'; }
-
+const int INF = 1.1e9;
+const ll INFLL = 4.4e18;
 const int dx[] = {1, 0, -1, 0, 1, -1, -1, 1};
 const int dy[] = {0, 1, 0, -1, 1, 1, -1, -1};
 
