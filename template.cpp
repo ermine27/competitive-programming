@@ -29,7 +29,6 @@ using mll = map<ll,ll>;
 #define vvls(x,h,...) vvl x(h,vl(__VA_ARGS__))
 template<typename T>bool chmax(T &a, const T &b) { if (a<b) { a=b; return 1; } return 0; }
 template<typename T>bool chmin(T &a, const T &b) { if (b<a) { a=b; return 1; } return 0; }
-template<typename T> T pow2(T x) { return x * x; }
 template<typename... T> void in(T&... a){ (cin >> ... >> a); }
 template<typename T> void out(T& a){ cout << a << '\n'; }
 template<typename T, typename... T2> void out(T& a, T2&... b){ cout << a; (cout << ... << (cout << ' ', b)); cout << '\n'; }
