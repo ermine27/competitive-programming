@@ -39,17 +39,17 @@ const ll INFLL = 4.4e18;
 const int dx[] = {1, 0, -1, 0, 1, -1, -1, 1};
 const int dy[] = {0, 1, 0, -1, 1, 1, -1, -1};
 
-int main(){
+int main() {
     ll x;
     int k;
-    in(x,k);
+    in(x, k);
 
-    rep(i,k){
-        ll p = pow(10,i+1);
-        ll p2 = pow(10,i);
+    rep(i, k) {
+        ll p = pow(10, i + 1);
+        ll p2 = pow(10, i);
         ll d = (x % p) / p2;
 
-        if(d>=5){
+        if (d >= 5) {
             x = (x / p + 1) * p;
         } else {
             x = x / p * p;
