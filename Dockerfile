@@ -32,10 +32,9 @@ RUN echo 'alias a="./a.out"' >> ~/.bashrc
 # --silent    ACでない場合でも出力と正解を出力しない
 # -e N    浮動小数点数としてチェックし、誤差がN以下の場合を許容する
 # -t N    制限時間
-RUN echo 'alias ojt="oj t -S --no-print-input"' >> ~/.bashrc
-RUN echo 'alias ojts="oj t -S --no-print-input --silent"' >> ~/.bashrc
-RUN echo 'alias ojte="oj t -S -e 1e-6 --no-print-input"' >> ~/.bashrc
-RUN echo 'alias ojte="oj t -t 2 --no-print-input"' >> ~/.bashrc
+RUN echo 'alias ojt="oj t -S -t 2 --no-print-input"' >> ~/.bashrc
+RUN echo 'alias ojts="oj t -S -t 2 --no-print-input --silent"' >> ~/.bashrc
+RUN echo 'alias ojte="oj t -S -t 2 -e 1e-6 --no-print-input"' >> ~/.bashrc
 
 
 # ソースディレクトリの作成・コピー
