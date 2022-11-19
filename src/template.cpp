@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// clang-format off
 #define _overload2(a,b,f,...) f
 #define _overload3(a,b,c,f,...) f
 #define _rep1(i,n) for(int i = 0; i < (int)(n); ++i)
@@ -45,7 +46,7 @@ const int dy[] = {0, 1, 0, -1, 1, 1, -1, -1};
 #else
 #define dbg(...) (static_cast<void>(0))
 #endif
-
+// clang-format on
 
 int main(){
     int n, m;
