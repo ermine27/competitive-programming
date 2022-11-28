@@ -3,8 +3,10 @@
 https://naskya.net/post/0002/
 https://gist.github.com/naskya/1e5e5cd269cfe16a76988378a60e2ca3
 
+使いたいソースに以下のコードを埋め込む
+
 #ifdef LOCAL
-#include "../../debug_print.hpp"
+#include "debug_print.hpp"
 #define debug(...) debug_print::multi_print(#__VA_ARGS__, __VA_ARGS__)
 #else
 #define debug(...) (static_cast<void>(0))
