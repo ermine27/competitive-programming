@@ -33,8 +33,11 @@ using mll = map<ll,ll>;
 template<typename T>bool chmax(T &a, const T &b) { if (a<b) { a=b; return 1; } return 0; }
 template<typename T>bool chmin(T &a, const T &b) { if (b<a) { a=b; return 1; } return 0; }
 template<typename... T> void in(T&... a){ (cin >> ... >> a); }
+template<typename T> void invec(T &x){ rep(i, sz(x)) cin >> x[i]; }
+template<typename T> void invec2(T &x){ rep(i, sz(x)) invec(x[i]); }
 template<typename T> void out(T& a){ cout << a << '\n'; }
 template<typename T, typename... T2> void out(T& a, T2&... b){ cout << a; (cout << ... << (cout << ' ', b)); cout << '\n'; }
+template<typename T> void outvec(const vector<T>& v, char d = '\n'){ rep(i,sz(v)) cout << v[i] << (i == sz(v)-1 ? '\n' : d);}
 const int INF = 1.1e9;
 const ll INFLL = 4.4e18;
 const int dx[] = {1, 0, -1, 0, 1, -1, -1, 1};
