@@ -33,12 +33,10 @@ set<int> eratosthenes(int x) {
 vector<bool> eratosthenesTable(int x) {
     vector<bool> primes(x + 1, 1);
     primes[0] = primes[1] = false;
-    vi res;
 
     for (int i = 2; i * i < x; ++i) {
         if (!primes[i])
             continue;
-        res.push_back(i);
 
         for (int j = i * 2; j <= x; j += i) {
             primes[j] = false;
