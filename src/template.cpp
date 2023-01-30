@@ -41,8 +41,8 @@ template<typename T> void outvec(const vector<T>& v, char d = '\n'){ rep(i,sz(v)
 #define yesno(x) cout << ((x) ? "Yes" : "No") << endl;
 #define yes(x) if(x){ cout << "Yes" << endl; exit(0); }
 #define no(x) if(x){ cout << "No" << endl; exit(0); }
-const int INF = 1.1e9;
-const ll INFLL = 4.4e18;
+const int INF = 1.01e9;
+const ll INFLL = 4.04e18;
 const int dx[] = {1, 0, -1, 0, 1, -1, -1, 1};
 const int dy[] = {0, 1, 0, -1, 1, 1, -1, -1};
 
