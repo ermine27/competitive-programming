@@ -9,11 +9,12 @@
  * @remark xが10^15くらいまでなら高速に処理ができるが、それ以上の値だと1秒以内には処理が終わらない
  */
 
-#include "../header.cpp"
+#include <bits/stdc++.h>
+using namespace std;
 
-vl divisor(ll x) {
-    vl ans;
-    for (ll i = 1; i * i <= x; ++i) {
+vector<long long> divisor(long long x) {
+    vector<long long> ans;
+    for (long long i = 1; i * i <= x; ++i) {
         if (x % i == 0) {
             ans.push_back(i);
             if (i * i != x) {
@@ -22,16 +23,17 @@ vl divisor(ll x) {
         }
     }
 
-    sort(all(ans));
+    sort(ans.begin(), ans.end());
     return ans;
 }
 
 int main() {
-    ll n;
-    in(n);
-    vl d = divisor(n);
+    long long n;
+    cin >> n;
+    vector<long long> d = divisor(n);
 
-    fore(a, d) cout << ' ' << a;
+    for (auto a : d) cout << ' ' << a;
+    // fore(a, d) cout << ' ' << a;
     cout << endl;
 
     return 0;

@@ -10,12 +10,13 @@
  * @remark 計算量：O(√N)
  */
 
-#include "../header.cpp"
+#include <bits/stdc++.h>
+using namespace std;
 
-bool isPrime(ll x) {
+bool isPrime(long long x) {
     if (x < 2)
         return false;
-    for (ll i = 2; i * i <= x; ++i) {
+    for (long long i = 2; i * i <= x; ++i) {
         if (x % i == 0)
             return false;
     }
@@ -23,8 +24,8 @@ bool isPrime(ll x) {
 }
 
 int main() {
-    ll n;
-    in(n);
+    long long n;
+    cin >> n;
     cout << (isPrime(n) ? "Yes" : "No") << endl;
     return 0;
 }

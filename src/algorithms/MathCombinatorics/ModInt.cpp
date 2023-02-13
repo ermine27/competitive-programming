@@ -1,4 +1,5 @@
-#include "../header.cpp"
+#include <bits/stdc++.h>
+using namespace std;
 
 template <int MOD>
 struct ModInt {
@@ -62,7 +63,7 @@ struct ModInt {
         return os;
     }
     friend constexpr istream &operator>>(istream &is, ModInt &m) noexcept {
-        ll t;
+        long long t;
         is >> t;
         m = ModInt<MOD>(t);
         return is;

@@ -13,7 +13,8 @@
  * @remark 出力される配列の値は素数なら1、素数でないなら0が入る
  */
 
-#include "../header.cpp"
+#include <bits/stdc++.h>
+using namespace std;
 
 set<int> eratosthenes(int x) {
     set<int> primes;
@@ -48,18 +49,20 @@ vector<bool> eratosthenesTable(int x) {
 
 int main() {
     int x;
-    in(x);
+    cin >> x;
 
     set<int> ans = eratosthenes(x);
 
     cout << "[set]" << endl;
-    fore(v, ans) cout << ' ' << v;
+    for (auto v : ans) cout << ' ' << v;
+    // fore(v, ans) cout << ' ' << v;
     cout << endl;
 
     vector<bool> ans2 = eratosthenesTable(x);
 
     cout << "[vector(table)]" << endl;
-    rep(i, x) cout << ' ' << ans2[i];
+    for (int i = 0; i < x; i++) cout << ' ' << ans2[i];
+    // rep(i, x) cout << ' ' << ans2[i];
     cout << endl;
 
     return 0;

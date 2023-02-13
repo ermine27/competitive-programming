@@ -8,10 +8,11 @@
  * @remark 計算量：O(NlogN)
  */
 
-#include "../header.cpp"
+#include <bits/stdc++.h>
+using namespace std;
 
-vi divisorCountTable(int x) {
-    vi primes(x + 1, 1);
+vector<int> divisorCountTable(int x) {
+    vector<int> primes(x + 1, 1);
 
     for (int i = 2; i <= x; ++i) {
         for (int j = i; j <= x; j += i) {
@@ -25,9 +26,9 @@ vi divisorCountTable(int x) {
 int main() {
     int x;
     cin >> x;
-    vi d = divisorCountTable(x);
+    vector<int> d = divisorCountTable(x);
 
-    repe(i,x){
+    for (int i = 1; i <= x; i++) {
         printf("%i = %d\n", i, d[i]);
     }
 

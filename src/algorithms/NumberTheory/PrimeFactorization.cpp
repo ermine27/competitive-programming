@@ -10,13 +10,14 @@
  * @note primeFactorize はpair<int,int> 型の値を返し、primeFactorizeMap は map<int,int> 型の値を返す
  */
 
-#include "../header.cpp"
+#include <bits/stdc++.h>
+using namespace std;
 
 // 素因数分解（pair版）
-vector<pii> primeFactorize(ll x) {
-    vector<pii> res;
+vector<pair<int, int>> primeFactorize(long long x) {
+    vector<pair<int, int>> res;
 
-    for (ll i = 2; i * i <= x; ++i) {
+    for (long long i = 2; i * i <= x; ++i) {
         int k = 0;
         while (x % i == 0) {
             x /= i;
@@ -33,10 +34,10 @@ vector<pii> primeFactorize(ll x) {
 }
 
 // 素因数分解（map版）
-mii primeFactorizeMap(ll x) {
-    mii res;
+map<int, int> primeFactorizeMap(long long x) {
+    map<int, int> res;
 
-    for (ll i = 2; i * i <= x; ++i) {
+    for (long long i = 2; i * i <= x; ++i) {
         while (x % i == 0) {
             x /= i;
             ++res[i];
@@ -49,19 +50,21 @@ mii primeFactorizeMap(ll x) {
 }
 
 int main() {
-    ll n;
+    long long n;
     cin >> n;
 
     auto ansPair = primeFactorize(n);
 
     puts("Pair");
-    fore(k, v, ansPair) printf("%d x %d\n", k, v);
+    for (auto [k, v] : ansPair) printf("%d x %d\n", k, v);
+    // fore(k, v, ansPair) printf("%d x %d\n", k, v);
     printf("\n");
 
     auto ansMap = primeFactorizeMap(n);
 
     puts("Map");
-    fore(k, v, ansMap) printf("%d x %d\n", k, v);
+    for (auto [k, v] : ansMap) printf("%d x %d\n", k, v);
+    // fore(k, v, ansMap) printf("%d x %d\n", k, v);
     printf("\n");
 
     return 0;
