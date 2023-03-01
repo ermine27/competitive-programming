@@ -46,6 +46,7 @@ struct Edge {
     T cost;
     Edge() = default;
     Edge(int from, int to, T cost) : from(from), to(to), cost(cost) {}
+    inline bool operator<(const Edge &e) const { return cost < e.cost; }
 };
 
 template <typename T = int>
