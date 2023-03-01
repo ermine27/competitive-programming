@@ -6,7 +6,7 @@ https://algo-logic.info/warshall-floyd/
 参考コード
 https://github.com/ei1333/library/blob/master/graph/shortest-path/bellman-ford.hpp
 問題例 GRL_1_C All Pairs Shortest Path
-https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_B
+https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_C
 */
 
 #include "../../header.cpp"
