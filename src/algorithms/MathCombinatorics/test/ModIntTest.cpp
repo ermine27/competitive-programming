@@ -1,4 +1,7 @@
-#include "../ModInt.cpp"
+#include <bits/stdc++.h>
+using namespace std;
+
+#include "../ModInt.hpp"
 
 // AC Library Modint 使用例より
 // https://atcoder.github.io/ac-library/production/document_ja/modint.html

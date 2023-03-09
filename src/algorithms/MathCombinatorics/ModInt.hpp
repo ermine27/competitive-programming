@@ -1,6 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
-
 template <int MOD>
 struct ModInt {
     long long val;
