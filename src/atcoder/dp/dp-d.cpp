@@ -15,21 +15,22 @@ int main() {
             // i番目の品物を選ぶ場合
             if (j >= w[i]) {
                 dp[i + 1][j] = max(dp[i][j - w[i]] + v[i], dp[i][j]);
-            }
             // i番目の品物を選ばない場合
-            dp[i + 1][j] = max(dp[i + 1][j], dp[i][j]);
+            } else {
+                dp[i + 1][j] = dp[i][j];
+            }
         }
     }
 // 配るDP
 #else
     for (int i = 0; i < n; i++) {
         for (int j = 0; j <= wmax; j++) {
+            // i番目の品物を選ばない場合
+            dp[i + 1][j] = max(dp[i + 1][j], dp[i][j]);
             // i番目の品物を選ぶ場合
             if (j + w[i] <= wmax) {
                 dp[i + 1][j + w[i]] = max(dp[i][j + w[i]], dp[i][j] + v[i]);
             }
-            // i番目の品物を選ばない場合
-            dp[i + 1][j] = max(dp[i + 1][j], dp[i][j]);
         }
     }
 #endif
