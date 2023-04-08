@@ -30,18 +30,18 @@ using namespace std;
 int n;
 vector<vector<vector<double>>> dp(301, vector<vector<double>>(301, vector<double>(301, -1)));
 
-double dfs(int d1, int d2, int d3) {
-    if (dp[d1][d2][d3] >= 0)
-        return dp[d1][d2][d3];
+double dfs(int i, int j, int k) {
+    if (dp[i][j][k] >= 0)
+        return dp[i][j][k];
 
     double res = 0.0;
-    if (d1 > 0)
-        res += dfs(d1 - 1, d2, d3) * d1;
-    if (d2 > 0)
-        res += dfs(d1 + 1, d2 - 1, d3) * d2;
-    if (d3 > 0)
-        res += dfs(d1, d2 + 1, d3 - 1) * d3;
-    return dp[d1][d2][d3] = (res + n) / (d1 + d2 + d3);
+    if (i > 0)
+        res += dfs(i - 1, j, k) * i;
+    if (j > 0)
+        res += dfs(i + 1, j - 1, k) * j;
+    if (k > 0)
+        res += dfs(i, j + 1, k - 1) * k;
+    return dp[i][j][k] = (res + n) / (i + j + k);
 }
 
 int main() {
