@@ -38,6 +38,7 @@ using pii = pair<int,int>;
 using pll = pair<ll,ll>;
 using mii = map<int,int>;
 using mll = map<ll,ll>;
+template<typename T> using priority_queue_asc = priority_queue<T, vector<T>, greater<T>>;
 #define vis(x,...) vi x(__VA_ARGS__)
 #define vls(x,...) vl x(__VA_ARGS__)
 #define vvis(x,h,...) vvi x(h,vi(__VA_ARGS__))
