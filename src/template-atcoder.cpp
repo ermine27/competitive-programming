@@ -39,10 +39,6 @@ using pll = pair<ll,ll>;
 using mii = map<int,int>;
 using mll = map<ll,ll>;
 template<typename T> using priority_queue_asc = priority_queue<T, vector<T>, greater<T>>;
-#define vis(x,...) vi x(__VA_ARGS__)
-#define vls(x,...) vl x(__VA_ARGS__)
-#define vvis(x,h,...) vvi x(h,vi(__VA_ARGS__))
-#define vvls(x,h,...) vvl x(h,vl(__VA_ARGS__))
 #define deg2rad(x) (x*M_PI/180.0)
 #define rad2deg(x) (x*180.0/M_PI)
 template<typename T>bool chmax(T &a, const T &b) { if (a<b) { a=b; return 1; } return 0; }
