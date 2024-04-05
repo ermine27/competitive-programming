@@ -45,6 +45,7 @@ int main() {
     }
     vector<vi> dp(n, vi(n));
 
+#if 0
     rep(i, n - 1) {
         rep(j, n - i - 1) {
             int left = j;
@@ -64,6 +65,27 @@ int main() {
             dp[left][right] = max(leftval, rightval);
         }
     }
+#else
+    // こっちのほうが分かりやすいコードになってる？
+    for (int len = 1; len < n; len++) {
+        rep(left, n - len) {
+            int right = left + len;
+
+            // 左側
+            int leftval = dp[left + 1][right];
+            if (left + 1 <= p[left] && p[left] <= right) {
+                leftval += a[left];
+            }
+            // 右側
+            int rightval = dp[left][right - 1];
+            if (left <= p[right] && p[right] <= right - 1) {
+                rightval += a[right];
+            }
+
+            dp[left][right] = max(leftval, rightval);
+        }
+    }
+#endif
 
     cout << dp[0][n - 1] << endl;
     return 0;
