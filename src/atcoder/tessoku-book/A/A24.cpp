@@ -1,3 +1,13 @@
+/*
+最長増加部分列(LIS)
+
+dp[i] : 長さi+1の増加部分列における、最終要素の最小値
+
+参考：最長増加部分列(LIS)の長さを求める
+https://qiita.com/python_walker/items/d1e2be789f6e7a0851e5
+最長増加部分列 - きままにものづくり
+https://even-eko.hatenablog.com/entry/2013/09/05/215236
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
